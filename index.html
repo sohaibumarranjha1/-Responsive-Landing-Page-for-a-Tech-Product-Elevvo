@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="dark light"/>
+  <title>CloudSync AI — Smart Cloud Assistant</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your existing stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+  <!-- Header / Nav -->
+  <header class="site-header shadow-md sticky top-0 z-50">
+    <div class="container header-inner flex items-center justify-between">
+      <a href="#" class="brand flex items-center space-x-2">
+        <img src="assets/logo.png" alt="CloudSync AI logo" class="brand-logo h-10"/>
+        <span class="brand-name font-bold text-lg">CloudSync AI</span>
+      </a>
+
+      <nav class="nav hidden md:flex space-x-6">
+        <a href="#features" class="hover:text-blue-500">Features</a>
+        <a href="#testimonials" class="hover:text-blue-500">Testimonials</a>
+        <a href="#pricing" class="hover:text-blue-500">Pricing</a>
+        <a href="#cta" class="hover:text-blue-500">Get Started</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <button id="themeToggle" class="theme-toggle p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700" aria-label="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+        <button class="burger text-2xl md:hidden" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer md:hidden bg-white dark:bg-gray-800 p-6 space-y-4 shadow-lg" id="mobileDrawer" hidden>
+    <a href="#features" class="drawer-link block">Features</a>
+    <a href="#testimonials" class="drawer-link block">Testimonials</a>
+    <a href="#pricing" class="drawer-link block">Pricing</a>
+    <a href="#cta" class="drawer-link block">Get Started</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero bg-gray-50 dark:bg-gray-900">
+    <div class="container hero-inner grid md:grid-cols-2 gap-8 items-center py-16">
+      <div class="hero-copy">
+        <h1 class="text-4xl font-bold leading-tight">Sync. Backup. Organize — automatically.</h1>
+        <p class="sub mt-4 text-lg text-gray-600 dark:text-gray-300">
+          CloudSync AI is your smart cloud assistant that keeps files synced across all devices,
+          removes duplicates, and auto-organizes everything securely.
+        </p>
+        <div class="hero-actions mt-6 flex space-x-4">
+          <a href="#pricing" class="btn btn-primary bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">View Pricing</a>
+          <a href="#features" class="btn btn-ghost border border-gray-400 dark:border-gray-600 px-6 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">See Features</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/hero.jpg" alt="CloudSync AI preview" class="rounded-xl shadow-lg" onerror="this.style.display='none'"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section py-16">
+    <div class="container">
+      <h2 class="section-title text-center text-3xl font-bold mb-10">Features</h2>
+      <div class="grid-3 grid gap-8 md:grid-cols-3">
+        <article class="card text-center p-6 shadow rounded-lg">
+          <img src="assets/feature1.png" class="icon mx-auto mb-4 h-16" alt="Smart Organization"/>
+          <h3 class="font-semibold text-xl mb-2">Smart Organization</h3>
+          <p class="text-gray-600 dark:text-gray-300">AI categorizes files, detects duplicates, and keeps your cloud tidy.</p>
+        </article>
+
+        <article class="card text-center p-6 shadow rounded-lg">
+          <img src="assets/feature2.png" class="icon mx-auto mb-4 h-16" alt="Calendar & Scheduling"/>
+          <h3 class="font-semibold text-xl mb-2">Schedule & Reminders</h3>
+          <p class="text-gray-600 dark:text-gray-300">Plan backups and get reminders so nothing slips through the cracks.</p>
+        </article>
+
+        <article class="card text-center p-6 shadow rounded-lg">
+          <img src="assets/feature3.png" class="icon mx-auto mb-4 h-16" alt="Cloud Sync"/>
+          <h3 class="font-semibold text-xl mb-2">Instant Cloud Sync</h3>
+          <p class="text-gray-600 dark:text-gray-300">Fast, secure, cross-device syncing with end-to-end encryption.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section bg-gray-50 dark:bg-gray-800 py-16">
+    <div class="container">
+      <h2 class="section-title text-center text-3xl font-bold mb-10">What users say</h2>
+      <div class="grid-3 grid gap-8 md:grid-cols-3">
+        <figure class="card testimonial p-6 shadow rounded-lg text-center">
+          <img src="assets/user1.jpg" alt="Sarah headshot" class="avatar mx-auto rounded-full h-16 w-16 mb-4"/>
+          <blockquote class="italic">“We cut hours of manual organizing every week. Game-changer.”</blockquote>
+          <figcaption class="mt-3 font-semibold">— Sarah K.</figcaption>
+        </figure>
+
+        <figure class="card testimonial p-6 shadow rounded-lg text-center">
+          <img src="assets/user2.jpg" alt="John headshot" class="avatar mx-auto rounded-full h-16 w-16 mb-4"/>
+          <blockquote class="italic">“Lightning-fast sync and the AI cleanup is scary good.”</blockquote>
+          <figcaption class="mt-3 font-semibold">— John M.</figcaption>
+        </figure>
+
+        <figure class="card testimonial p-6 shadow rounded-lg text-center">
+          <img src="assets/user3.jpg" alt="Lisa headshot" class="avatar mx-auto rounded-full h-16 w-16 mb-4"/>
+          <blockquote class="italic">“Perfect for remote teams — everything’s always in the right place.”</blockquote>
+          <figcaption class="mt-3 font-semibold">— Lisa T.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section py-16">
+    <div class="container">
+      <h2 class="section-title text-center text-3xl font-bold mb-10">Pricing</h2>
+      <div class="grid-3 grid gap-8 md:grid-cols-3">
+        <article class="card price-card p-6 shadow rounded-lg text-center">
+          <div class="price-header mb-4">
+            <h3 class="font-semibold text-xl">Free</h3>
+            <p class="price text-2xl font-bold">$0<span class="text-base font-normal">/mo</span></p>
+          </div>
+          <ul class="features-list space-y-2 mb-4">
+            <li>Basic sync</li>
+            <li>5 GB storage</li>
+            <li>Community support</li>
+          </ul>
+          <a href="#cta" class="btn btn-ghost border border-gray-400 px-6 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Choose</a>
+        </article>
+
+        <article class="card price-card popular p-6 shadow-lg border-2 border-blue-600 rounded-lg text-center relative">
+          <div class="badge absolute top-0 right-0 bg-blue-600 text-white text-xs px-2 py-1 rounded-bl-lg">Most Popular</div>
+          <div class="price-header mb-4">
+            <h3 class="font-semibold text-xl">Pro</h3>
+            <p class="price text-2xl font-bold">$9.99<span class="text-base font-normal">/mo</span></p>
+          </div>
+          <ul class="features-list space-y-2 mb-4">
+            <li>Unlimited devices</li>
+            <li>AI smart organization</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#cta" class="btn btn-primary bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Choose</a>
+        </article>
+
+        <article class="card price-card p-6 shadow rounded-lg text-center">
+          <div class="price-header mb-4">
+            <h3 class="font-semibold text-xl">Team</h3>
+            <p class="price text-2xl font-bold">$19.99<span class="text-base font-normal">/mo</span></p>
+          </div>
+          <ul class="features-list space-y-2 mb-4">
+            <li>Shared workspaces</li>
+            <li>Admin controls</li>
+            <li>Audit logs</li>
+          </ul>
+          <a href="#cta" class="btn btn-ghost border border-gray-400 px-6 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Choose</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="section cta bg-blue-600 text-white py-16">
+    <div class="container cta-inner text-center">
+      <h2 class="text-3xl font-bold">Ready to try CloudSync AI?</h2>
+      <p class="mt-2 text-lg">Start free and experience effortless syncing and organization.</p>
+      <a href="#" class="btn btn-primary mt-4 bg-white text-blue-600 px-6 py-3 rounded-lg shadow hover:bg-gray-100">Start Free</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer bg-gray-900 text-gray-400 py-6">
+    <div class="container footer-inner flex justify-between items-center">
+      <p>© 2025 Elevvo — Built by <span class="accent text-blue-500">sohaibranjha</span></p>
+      <div class="social flex space-x-4"></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
